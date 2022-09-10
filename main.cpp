@@ -12,8 +12,6 @@ int func(int n)
 
 int main() {
     int x = 3;
-
     printf("%d", func(x));
-
     return 0;
 }

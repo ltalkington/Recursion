@@ -62,6 +62,15 @@ int nestedRecursion(int n) {
     }
     return nestedRecursion(nestedRecursion(n+11));
 }
+
+int sum(int n) {
+    if(n==0) {
+        return 0;
+    }
+    else {
+        return sum(n-1) +n;
+    }
+}
 int main() {
     int x = 3;
     printf("Tail Recursion:");
@@ -78,5 +87,7 @@ int main() {
     indirectRecursion1(20);
     printf("\nNested Recursion:");
     printf("%d", nestedRecursion(95));
+    printf("\nNatural sum Recursion:");
+    printf("%d", sum(5));
     return 0;
 }

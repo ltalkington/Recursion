@@ -55,6 +55,13 @@ void indirectRecursion2(int n) {
 
     }
 }
+
+int nestedRecursion(int n) {
+    if(n>100) {
+        return n-10;
+    }
+    return nestedRecursion(nestedRecursion(n+11));
+}
 int main() {
     int x = 3;
     printf("Tail Recursion:");
@@ -69,5 +76,7 @@ int main() {
     treeRecursion(x);
     printf("\nIndirect Recursion:");
     indirectRecursion1(20);
+    printf("\nNested Recursion:");
+    printf("%d", nestedRecursion(95));
     return 0;
 }

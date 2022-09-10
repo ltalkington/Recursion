@@ -32,6 +32,14 @@ void headIteration(int n) {
     }
 }
 
+void treeRecursion(int n) {
+    if(n>0) {
+        printf("%d", n);
+        treeRecursion(n-1);
+        treeRecursion(n-1);
+    }
+}
+
 int main() {
     int x = 3;
     printf("Tail Recursion:");
@@ -42,5 +50,7 @@ int main() {
     headRecursion(x);
     printf("\nHead Iteration:");
     headIteration(x);
+    printf("\nTree Recursion:");
+    treeRecursion(x);
     return 0;
 }

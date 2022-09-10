@@ -39,7 +39,22 @@ void treeRecursion(int n) {
         treeRecursion(n-1);
     }
 }
+void indirectRecursion2(int n);
 
+void indirectRecursion1(int n) {
+    if(n>0) {
+        printf("%d", n);
+        indirectRecursion2(n-1);
+    }
+}
+
+void indirectRecursion2(int n) {
+    if(n>1) {
+        printf("%d", n);
+        indirectRecursion1(n/2);
+
+    }
+}
 int main() {
     int x = 3;
     printf("Tail Recursion:");
@@ -52,5 +67,7 @@ int main() {
     headIteration(x);
     printf("\nTree Recursion:");
     treeRecursion(x);
+    printf("\nIndirect Recursion:");
+    indirectRecursion1(20);
     return 0;
 }

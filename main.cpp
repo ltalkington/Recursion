@@ -1,17 +1,24 @@
 #include <iostream>
 
-int func(int n)
+void tailRecursion(int n)
 {
-    static int x=0;
     if(n>0){
-        x++;
-        return func(n-1 ) + x ;
+        printf("%d", n);
+        tailRecursion(n-1 ) ;
     }
-    return 0;
+}
+
+void tailIteration(int n)
+{
+    while(n >0) {
+        printf("%d", n);
+        n--;
+    }
 }
 
 int main() {
     int x = 3;
-    printf("%d", func(x));
+    tailRecursion(x);
+    tailIteration(x);
     return 0;
 }
